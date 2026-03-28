@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Banking App - Case Study | Alex Chen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Case Study Specific Styles */
+        .case-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+        
+        .case-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .case-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .case-meta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .case-meta-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+        
+        .case-meta-value {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .case-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+        }
+        
+        .case-hero .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .case-hero-image {
+            margin-top: 3rem;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .case-section {
+            padding: 4rem 0;
+        }
+        
+        .case-section:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+        
+        .case-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .case-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .case-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .case-content h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+        
+        .challenge-solution {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .challenge-card, .solution-card {
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+        }
+        
+        .challenge-card {
+            background: #fef2f2;
+            border-left: 4px solid #ef4444;
+        }
+        
+        .solution-card {
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+        }
+        
+        .challenge-card h3, .solution-card h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .challenge-card p, .solution-card p {
+            margin-bottom: 0;
+        }
+        
+        .process-steps {
+            margin: 2rem 0;
+        }
+        
+        .process-step {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .process-step:last-child {
+            border-bottom: none;
+        }
+        
+        .step-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+        
+        .step-content h3 {
+            margin-top: 0;
+        }
+        
+        .step-content ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+        }
+        
+        .step-content li {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-full {
+            grid-column: span 2;
+        }
+        
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .stat-card .number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-card .label {
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+        
+        .key-takeaways {
+            background: var(--bg-dark);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .key-takeaways h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .takeaway-card {
+            padding: 2rem;
+            background: var(--bg-darker);
+            border-radius: var(--radius-lg);
+        }
+        
+        .takeaway-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .takeaway-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .next-project {
+            padding: 4rem 0;
+            text-align: center;
+            background: var(--bg-secondary);
+        }
+        
+        .next-project h3 {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        .next-project h2 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        @media (max-width: 768px) {
+            .challenge-solution {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-step {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .step-number {
+                font-size: 2rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-full {
+                grid-column: span 1;
+            }
+            
+            .stats-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .takeaways-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Alex Chen</a>
+            <div class="nav-links">
+                <a href="index.html#work" class="nav-link">Work</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#skills" class="nav-link">Skills</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Case Study Hero -->
+    <section class="case-hero">
+        <div class="case-hero-content">
+            <div class="case-meta">
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Role</span>
+                    <span class="case-meta-value">Lead Product Designer</span>
+                </div>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Timeline</span>
+                    <span class="case-meta-value">Jan - Jun 2024</span>
+                </div>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Team</span>
+                    <span class="case-meta-value">2 Designers, 5 Engineers</span>
+                </div>
+                <div class="case-meta-item">
+                    <span class="case-meta-label">Platform</span>
+                    <span class="case-meta-value">iOS & Android</span>
+                </div>
+            </div>
+            <h1>Nova Banking App</h1>
+            <p class="subtitle">
+                Redesigning the mobile banking experience for 2M+ users, 
+                making financial management intuitive and accessible.
+            </p>
+            <div class="case-hero-image">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1200&h=600&fit=crop" alt="Nova Banking App">
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="case-section">
+        <div class="case-content">
+            <h2>Overview</h2>
+            <p>
+                Nova Bank approached us with a challenge: their mobile app, while feature-rich, 
+                was seeing declining user engagement and rising support tickets. Users found it 
+                difficult to complete basic tasks, and the visual design felt outdated compared 
+                to competitors.
+            </p>
+            <p>
+                Our goal was to completely reimagine the banking experience—making it not just 
+                functional, but delightful. We wanted users to feel confident and in control of 
+                their finances, not overwhelmed or anxious.
+            </p>
+        </div>
+    </section>
+
+    <!-- Challenge & Solution -->
+    <section class="case-section">
+        <div class="case-content">
+            <h2>The Challenge</h2>
+            <div class="challenge-solution">
+                <div class="challenge-card">
+                    <h3>The Problem</h3>
+                    <p>
+                        <strong>User Drop-off:</strong> 68% of users abandoned the app 
+                        within the first 3 sessions.
+                    </p>
+                    <p>
+                        <strong>Support Load:</strong> 40% of support tickets were about 
+                        basic tasks users couldn't find.
+                    </p>
+                    <p>
+                        <strong>NPS Score:</strong> Standing at 23, significantly below 
+                        industry average of 45.
+                    </p>
+                </div>
+                <div class="solution-card">
+                    <h3>Our Approach</h3>
+                    <p>
+                        <strong>Research-First:</strong> Deep dive into user behaviors, 
+                        pain points, and mental models.
+                    </p>
+                    <p>
+                        <strong>Simplify:</strong> Reduce cognitive load by 60% through 
+                        smart information architecture.
+                    </p>
+                    <p>
+                        <strong>Delight:</strong> Add micro-interactions that make 
+                        banking feel less like a chore.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="case-section">
+        <div class="case-content">
+            <h2>Design Process</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <span class="step-number">01</span>
+                    <div class="step-content">
+                        <h3>Research & Discovery</h3>
+                        <p>
+                            We conducted extensive user research to understand the real needs 
+                            and frustrations of Nova's customers.
+                        </p>
+                        <ul>
+                            <li>30 user interviews across different demographics</li>
+                            <li>Analysis of 10,000+ support tickets</li>
+                            <li>Competitive audit of 15 banking apps</li>
+                            <li>Stakeholder interviews with bank executives</li>
+                            <li>User journey mapping workshops</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">02</span>
+                    <div class="step-content">
+                        <h3>Defining the Problem</h3>
+                        <p>
+                            Synthesizing research findings to identify key opportunities and 
+                            define actionable problem statements.
+                        </p>
+                        <ul>
+                            <li>Created user personas: Sarah (Busy Professional), Mike (Family Man), Lisa (Student)</li>
+                            <li>Identified 5 critical user flows for redesign</li>
+                            <li>Prioritized features based on user impact vs. effort</li>
+                            <li>Established design principles and success metrics</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">03</span>
+                    <div class="step-content">
+                        <h3>Ideation & Prototyping</h3>
+                        <p>
+                            Generating and testing ideas through rapid prototyping and 
+                            iterative design.
+                        </p>
+                        <ul>
+                            <li>Created 50+ wireframe concepts</li>
+                            <li>Conducted 3 rounds of design studio sessions</li>
+                            <li>Built interactive prototypes in Figma</li>
+                            <li>Performed 5 usability tests with early prototypes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <span class="step-number">04</span>
+                    <div class="step-content">
+                        <h3>Design & Refinement</h3>
+                        <p>
+                            Polishing the design system and creating high-fidelity 
+                            interfaces with attention to every detail.
+                        </p>
+                        <ul>
+                            <li>Developed comprehensive design system with 120+ components</li>
+                            <li>Created motion guidelines for micro-interactions</li>
+                            <li>Designed accessibility-first components (WCAG 2.1 AA)</li>
+                            <li>Produced developer handoff documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design Gallery -->
+    <section class="case-section">
+        <div class="case-content">
+            <h2>Design Solutions</h2>
+            <p>
+                The redesigned app features a clean, modern interface with a focus on 
+                clarity and ease of use. Every element was carefully considered to reduce 
+                cognitive load and guide users naturally through tasks.
+            </p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Dashboard Design">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Analytics View">
+                </div>
+                <div class="gallery-item gallery-full">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=1200&h=400&fit=crop" alt="Transaction Flow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="case-section">
+        <div class="case-content">
+            <h2>Results & Impact</h2>
+            <p>
+                The redesigned app launched in June 2024 to existing users, with impressive 
+                results across all key metrics. The new design has transformed how users 
+                interact with their finances.
+            </p>
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="number">45%</div>
+                    <div class="label">Increase in User Engagement</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">-60%</div>
+                    <div class="label">Reduction in Support Tickets</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">72</div>
+                    <div class="label">Net Promoter Score (up from 23)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="key-takeaways">
+        <div class="container">
+            <h2 style="text-align: center;">Key Takeaways</h2>
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <h4>Research is Everything</h4>
+                    <p>
+                        The depth of our research directly correlated with the success of 
+                        the final product. Understanding users' mental models was crucial 
+                        to creating intuitive flows.
+                    </p>
+                </div>
+                <div class="takeaway-card">
+                    <h4>Less is More</h4>
+                    <p>
+                        Simplifying the interface by removing rarely-used features and 
+                        consolidating similar actions dramatically improved task completion 
+                        rates.
+                    </p>
+                </div>
+                <div class="takeaway-card">
+                    <h4>Cross-Functional Collaboration</h4>
+                    <p>
+                        Close partnership with engineering from day one ensured our 
+                        designs were not only beautiful but technically feasible and 
+                        performant.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Project -->
+    <section class="next-project">
+        <div class="container">
+            <h3>Next Project</h3>
+            <h2>Analytics Dashboard</h2>
+            <div class="btn-group">
+                <a href="#" class="btn btn-primary">View Case Study</a>
+                <a href="index.html#work" class="btn btn-secondary">Back to Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">Alex Chen</a>
+                    <p>UI/UX Designer crafting digital experiences that matter.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="index.html#work">Work</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#skills">Skills</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Social</h4>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Dribbble</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="#">Resume</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Newsletter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alex Chen. All rights reserved.</p>
+                <p>Designed & built with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

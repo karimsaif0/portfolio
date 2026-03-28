@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen | UI/UX Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Alex Chen</a>
+            <div class="nav-links">
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for new projects
+            </div>
+            <h1 class="hero-title">
+                Crafting digital experiences<br>
+                <span class="gradient-text">that matter.</span>
+            </h1>
+            <p class="hero-subtitle">
+                UI/UX Designer with 5+ years of experience turning complex problems 
+                into elegant, user-centered solutions. Currently designing at Spotify.
+            </p>
+            <div class="hero-cta">
+                <a href="#work" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15M+</span>
+                    <span class="stat-label">Users Impacted</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-image-container">
+                <div class="hero-shape shape-1"></div>
+                <div class="hero-shape shape-2"></div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop" alt="Designer at work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Selected Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-desc">
+                    A curated collection of projects where design met business goals.
+                </p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card project-featured" data-category="mobile">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop" alt="Fintech App">
+                        <div class="project-overlay">
+                            <span class="view-project">View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Mobile App</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <h3 class="project-title">Nova Banking App</h3>
+                        <p class="project-desc">
+                            Redesigned the mobile banking experience for 2M+ users, 
+                            increasing engagement by 45%.
+                        </p>
+                        <div class="project-tags">
+                            <span>UI Design</span>
+                            <span>User Research</span>
+                            <span>Prototyping</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="SaaS Dashboard">
+                        <div class="project-overlay">
+                            <span class="view-project">View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Web Application</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-desc">
+                            Built a comprehensive analytics platform helping teams 
+                            make data-driven decisions.
+                        </p>
+                        <div class="project-tags">
+                            <span>Dashboard</span>
+                            <span>Data Viz</span>
+                            <span>UX</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop" alt="E-commerce">
+                        <div class="project-overlay">
+                            <span class="view-project">View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Website</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Redesign</h3>
+                        <p class="project-desc">
+                            Transformed the shopping experience, resulting in 
+                            30% increase in conversion rate.
+                        </p>
+                        <div class="project-tags">
+                            <span>E-commerce</span>
+                            <span>Conversion</span>
+                            <span>UI</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card" data-category="design-system">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop" alt="Design System">
+                        <div class="project-overlay">
+                            <span class="view-project">View Case Study</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta">
+                            <span class="project-category">Design System</span>
+                            <span class="project-year">2023</span>
+                        </div>
+                        <h3 class="project-title">Unified Design System</h3>
+                        <p class="project-desc">
+                            Created a scalable design system serving 12 product teams 
+                            across the organization.
+                        </p>
+                        <div class="project-tags">
+                            <span>Components</span>
+                            <span>Tokens</span>
+                            <span>Documentation</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="view-all">
+                <a href="#" class="btn btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">How I Work</span>
+                <h2 class="section-title">Design Process</h2>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-number">01</div>
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                    </div>
+                    <h3>Discover</h3>
+                    <p>
+                        Deep diving into user needs, business goals, and market trends 
+                        through research and stakeholder interviews.
+                    </p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">02</div>
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+                    </div>
+                    <h3>Define</h3>
+                    <p>
+                        Synthesizing insights to identify key problems and define 
+                        clear, actionable design opportunities.
+                    </p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">03</div>
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.375 2.625a1 1 0 0 1 3 3l-9.013 9.014a2 2 0 0 1-.853.505l-2.873.84a.5.5 0 0 1-.62-.62l.84-2.873a2 2 0 0 1 .506-.852z"></path></svg>
+                    </div>
+                    <h3>Design</h3>
+                    <p>
+                        Creating wireframes, prototypes, and high-fidelity designs 
+                        with continuous iteration and feedback.
+                    </p>
+                </div>
+                
+                <div class="process-card">
+                    <div class="process-number">04</div>
+                    <div class="process-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                    </div>
+                    <h3>Deliver</h3>
+                    <p>
+                        Handing off production-ready designs with comprehensive 
+                        documentation and developer collaboration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=600&fit=crop" alt="Alex Chen">
+                    <div class="about-image-decoration"></div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label">About Me</span>
+                    <h2 class="section-title">Designing with purpose,<br>building with passion.</h2>
+                    <p>
+                        I'm Alex, a UI/UX designer based in San Francisco with a passion for 
+                        creating digital experiences that make a real impact. With over 5 years 
+                        of experience in the industry, I've had the privilege of working with 
+                        startups and Fortune 500 companies alike.
+                    </p>
+                    <p>
+                        My approach combines data-driven insights with creative problem-solving, 
+                        ensuring that every design decision is backed by user needs and business 
+                        objectives. I believe great design is invisible—it just works.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail">
+                            <span class="detail-label">Location</span>
+                            <span class="detail-value">San Francisco, CA</span>
+                        </div>
+                        <div class="detail">
+                            <span class="detail-label">Education</span>
+                            <span class="detail-value">BFA, Interaction Design</span>
+                        </div>
+                        <div class="detail">
+                            <span class="detail-label">Current Role</span>
+                            <span class="detail-value">Senior Designer @ Spotify</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Expertise</span>
+                <h2 class="section-title">Tools & Skills</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Design Tools</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117a3.019 3.019 0 003.018-3.018 3.019 3.019 0 00-3.018-3.018h-3.117v6.036zM9.376 0v8.981H4.788c-2.476 0-4.49 2.014-4.49 4.49s2.014 4.491 4.49 4.491h4.588v4.039h4.588V0H9.376z"/></svg>
+                            </div>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <span>Sketch</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.326 14.828l-3.896-3.896 1.415-1.414 2.5 2.5c.39.39.39 1.024 0 1.414l-4.65 4.65c-.39.39-1.024.39-1.414 0l-2.5-2.5 1.414-1.414 3.896 3.896c.86.86 2.215.764 3.024-.146.809-.909.726-2.163-.14-3.024zM5.616 8.768l-2.5-2.5c-.39-.39-1.024-.39-1.414 0l-4.65 4.65c-.39.39-.39 1.024 0 1.414l2.5 2.5-1.414 1.414-3.896-3.896c-.86-.86-2.215-.764-3.024.146-.809.909-.726 2.163.14 3.024l3.896 3.896-1.415 1.414-2.5-2.5c-.39-.39-1.024-.39-1.414 0L-7.934 19.72c-.39.39-.39 1.024 0 1.414l2.5 2.5 1.414-1.414 3.896 3.896c.86.86 2.215.764 3.024-.146.809-.909.726-2.163-.14-3.024l-3.896-3.896 1.415-1.414 2.5 2.5c.39.39 1.024.39 1.414 0l4.65-4.65c.39-.39.39-1.024 0-1.414l-2.5-2.5 1.414-1.414 3.896 3.896c.86.86 2.215.764 3.024-.146.809-.909.726-2.163-.14-3.024l-3.896-3.896 1.414-1.414 2.5 2.5c.39.39 1.024.39 1.414 0l4.65-4.65c.39-.39.39-1.024 0-1.414l-2.5-2.5 1.414-1.414z"/></svg>
+                            </div>
+                            <span>Adobe XD</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.966 22.624l-1.69-4.281H8.122l3.892-9.144 5.662 13.425h-3.71zm-6.758-9.302l-2.843 6.685H2.338l4.87-11.478 5.8 13.75h-2.26L7.208 13.322z"/></svg>
+                            </div>
+                            <span>Framer</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
+                            </div>
+                            <span>After Effects</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Design Skills</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <span>User Research</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
+                            </div>
+                            <span>Wireframing</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><line x1="3" x2="21" y1="9" y2="9"></line><line x1="9" x2="9" y1="21" y2="9"></line></svg>
+                            </div>
+                            <span>Prototyping</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                            </div>
+                            <span>Information Architecture</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                            </div>
+                            <span>Visual Design</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Other Skills</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <span>HTML/CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+                            </div>
+                            <span>Design Systems</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            </div>
+                            <span>User Testing</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <span>Team Collaboration</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path></svg>
+                            </div>
+                            <span>Documentation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What People Say</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Alex has an exceptional ability to translate complex user needs into 
+                        elegant, intuitive interfaces. Their work on our banking app redesign 
+                        exceeded all expectations."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="John Smith">
+                        <div class="author-info">
+                            <span class="author-name">John Smith</span>
+                            <span class="author-role">Product Director, Nova Bank</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Working with Alex was a game-changer for our design team. Their 
+                        design system implementation saved us countless hours and improved 
+                        our overall product quality."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Sarah Johnson">
+                        <div class="author-info">
+                            <span class="author-name">Sarah Johnson</span>
+                            <span class="author-role">VP of Design, TechCorp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Alex brings a unique blend of strategic thinking and pixel-perfect 
+                        execution. They truly understand how to balance user needs with 
+                        business objectives."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Michael Chen">
+                        <div class="author-info">
+                            <span class="author-name">Michael Chen</span>
+                            <span class="author-role">CEO, StartupXYZ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-content">
+                    <span class="section-label">Get In Touch</span>
+                    <h2 class="section-title">Let's create something amazing together.</h2>
+                    <p>
+                        I'm always excited to connect with fellow designers, potential 
+                        collaborators, or anyone who wants to chat about design. 
+                        Drop me a message!
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:hello@alexchen.design" class="contact-link">
+                            <span class="link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </span>
+                            hello@alexchen.design
+                        </a>
+                        <a href="#" class="contact-link">
+                            <span class="link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                            </span>
+                            LinkedIn
+                        </a>
+                        <a href="#" class="contact-link">
+                            <span class="link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h.01"></path><path d="M12 12h.01"></path><path d="M16 12h.01"></path></svg>
+                            </span>
+                            Dribbble
+                        </a>
+                        <a href="#" class="contact-link">
+                            <span class="link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </span>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Alex Chen</a>
+                    <p>UI/UX Designer crafting digital experiences that matter.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="#work">Work</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Social</h4>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Dribbble</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="#">Resume</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Newsletter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Alex Chen. All rights reserved.</p>
+                <p>Designed & built with passion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
